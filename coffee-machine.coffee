@@ -172,29 +172,31 @@
 
   #===========================================================================
 
-  #======
-  # NODE
-  #======
-  if typeof exports isnt "undefined"
-    exports = module.exports = StateMachine  if typeof module isnt "undefined" and module.exports
-    exports.StateMachine = StateMachine
-
-  #============
-  # AMD/REQUIRE
-  #============
-  else if typeof define is "function" and define.amd
-    define (require) ->
-      StateMachine
-
-
-  #========
-  # BROWSER
-  #========
-  else if typeof window isnt "undefined"
-    window.StateMachine = StateMachine
-
-  #===========
-  # WEB WORKER
-  #===========
-  else self.StateMachine = StateMachine  if typeof self isnt "undefined"
+#  #======
+#  # NODE
+#  #======
+#  if typeof exports isnt "undefined"
+#    exports = module.exports = StateMachine  if typeof module isnt "undefined" and module.exports
+#    exports.StateMachine = StateMachine
+#
+#  #============
+#  # AMD/REQUIRE
+#  #============
+#  else if typeof define is "function" and define.amd
+#    define (require) ->
+#      StateMachine
+#
+#
+#  #========
+#  # BROWSER
+#  #========
+#  else if typeof window isnt "undefined"
+#    window.StateMachine = StateMachine
+#
+#  #===========
+#  # WEB WORKER
+#  #===========
+#  else self.StateMachine = StateMachine  if typeof self isnt "undefined"
 )()
+
+exports.StateMachine = StateMachine
